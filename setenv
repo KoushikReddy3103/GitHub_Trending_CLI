@@ -1,0 +1,9 @@
+if [ -d .git-trending-env ];
+then
+    python -m pip install -r requirements.txt
+    source .git-trending-env/bin/activate
+else
+    python -m venv .git-trending-env
+    python -m pip install -r requirements.txt
+    source .git-trending-env/bin/activate
+fi
